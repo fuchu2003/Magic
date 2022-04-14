@@ -207,6 +207,7 @@ footer {
 }
 
 #close {
+    margin-top: 8%;
     width: 100%;
     outline: none;
     background: transparent;
