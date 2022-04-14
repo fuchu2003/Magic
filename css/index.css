@@ -238,7 +238,11 @@ footer {
 
 }
 @media screen and (max-width: 425px) {
-
+    
+    #main {
+        height: 70vh;
+    }
+    
     #color {
         top: 60px;
     }
