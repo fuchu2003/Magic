@@ -247,3 +247,14 @@ footer {
         font-size: 12px;
     }
 }
+@media screen and (max-width: 375px) {
+
+    #color {
+        padding: 9%;
+        height: 29vh;
+    }
+
+    footer {
+        font-size: 9px;
+    }
+}
