@@ -1,3 +1,24 @@
+document.body.onload = () => {
+    let back = localStorage.getItem('color1');
+    let them = localStorage.getItem('color2');
+
+    if (back == null) {
+        let root = document.documentElement;
+        root.style.setProperty('--color', '#000');
+    } else {
+        let root = document.documentElement;
+        root.style.setProperty('--color', back);
+    }
+    if (them == null) {
+        let root = document.documentElement;
+        root.style.setProperty('--color1', '#03e9f4');
+    } else {
+        let root = document.documentElement;
+        root.style.setProperty('--color1', them);
+    }
+};
+
+
 let btn = document.querySelector('button');
 
 btn.addEventListener('click', () => {
@@ -23,9 +44,8 @@ setInterval(function changeColor() {
 
 document.getElementById('colorVal').oninput = () => {
 
-
     let bg = document.getElementById('colorVal').value;
-
+    localStorage.setItem('color1', bg);
     let root = document.documentElement;
     root.style.setProperty('--color', bg);
 }
@@ -34,7 +54,7 @@ document.getElementById('colorVal1').oninput = () => {
 
 
     let theme = document.getElementById('colorVal1').value;
-
+    localStorage.setItem('color2', theme);
     let root = document.documentElement;
     root.style.setProperty('--color1', theme);
 }
