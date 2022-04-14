@@ -34,14 +34,8 @@ btn.addEventListener('click', () => {
     colorDiv.style.cssText = "display:flex;";
 });
 
-let opt = document.getElementById('speed');
-opt.oninput = () => {
-  const optValue = document.getElementById('speed').value;
-  autoColorChange('color',optValue);
-};
-
 /* auto color change */
-function autoColorChange(element,time=100){
+function autoColorChange(element,time){
   let a = 1, b = 1, c = 1;
   let R = 1, G = 1, B = 1;
   setInterval(() => {
@@ -52,8 +46,15 @@ function autoColorChange(element,time=100){
       if (R >= 50) G += b;
       if (G >= 50) B += c;
       R += a;
+      console.log(time);
   }, time);
 }
+
+let opt = document.getElementById('speed');
+opt.oninput = () => {
+  const optValue = document.getElementById('speed').value;
+  autoColorChange('color',optValue);
+};
 
 
 /* background color change and set up to localStorage */
@@ -63,7 +64,8 @@ document.getElementById('colorVal').oninput = () => {
     localStorage.setItem('color1', bg);
     let root = document.documentElement;
     root.style.setProperty('--color', bg);
-}
+};
+
 /*  color change and set up to localStorage */
 document.getElementById('colorVal1').oninput = () => {
 
@@ -72,10 +74,10 @@ document.getElementById('colorVal1').oninput = () => {
     localStorage.setItem('color2', theme);
     let root = document.documentElement;
     root.style.setProperty('--color1', theme);
-}
+};
+
 /* close button */
 document.getElementById('close').onclick = () => {
     document.getElementById('color').style.display = "none";
-}
-
+};
 
