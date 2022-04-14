@@ -242,6 +242,7 @@ footer {
     }
     
     #color {
+        border-radius: 0px;
         top: 60px;
     }
 
