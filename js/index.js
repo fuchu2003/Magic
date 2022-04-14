@@ -38,7 +38,8 @@ btn.addEventListener('click', () => {
 function autoColorChange(element,time){
   let a = 1, b = 1, c = 1;
   let R = 1, G = 1, B = 1;
-  setInterval(function colorChange(){
+    //use var because clearInterval requried interval object name.
+  var interval = setInterval(function colorChange(){
       document.getElementById(element).style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
       if (R <= 0 || R >= 255) a = -a;
       if (G <= 0 || G >= 255) b = -b;
@@ -51,8 +52,17 @@ function autoColorChange(element,time){
 }
 
 let opt = document.getElementById('speed');
+//backup of id(speed) element value.
+let val = parseInt(document.getElementById('speed').value);
 opt.oninput = () => {
+    //current value of id(speed) element.
   const optValue = parseInt(document.getElementById('speed').value);
+    //check backup value[val] & current value are equal or not.
+    if(val !== optValue){
+        //clearInterval of interval object inside autoColorChange function
+        clearInterval(interval);
+        val = optValue;
+    }
   autoColorChange('color',optValue);
 };
 
