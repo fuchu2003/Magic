@@ -38,7 +38,7 @@ btn.addEventListener('click', () => {
 function autoColorChange(element,time){
   let a = 1, b = 1, c = 1;
   let R = 1, G = 1, B = 1;
-  setInterval(() => {
+  setInterval(function colorChange(){
       document.getElementById(element).style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
       if (R <= 0 || R >= 255) a = -a;
       if (G <= 0 || G >= 255) b = -b;
