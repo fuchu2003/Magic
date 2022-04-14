@@ -39,7 +39,7 @@ header {
     left: 3%;
     height: 35vh;
     width: auto;
-    padding: 3%;
+    padding: 3% 5%;
     display: none;
     flex-direction: column;
     justify-content: center;
