@@ -52,7 +52,7 @@ function autoColorChange(element,time){
 
 let opt = document.getElementById('speed');
 opt.oninput = () => {
-  const optValue = document.getElementById('speed').value;
+  const optValue = parseInt(document.getElementById('speed').value);
   autoColorChange('color',optValue);
 };
 
