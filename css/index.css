@@ -45,6 +45,7 @@ header {
     justify-content: center;
     align-items: center;
     animation-name: new;
+    border-radius: 8px;
     animation-duration: .8s;
     animation-iteration-count: 1;
     transition: all .8s linear;
