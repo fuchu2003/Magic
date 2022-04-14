@@ -44,8 +44,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    animation-name: new;
+
+animation-name: new;
     animation-duration: .8s;
     animation-iteration-count: 1;
     transition: all .8s linear;
