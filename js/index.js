@@ -5,16 +5,20 @@ document.body.onload = () => {
     if (back == null) {
         let root = document.documentElement;
         root.style.setProperty('--color', '#000');
+        document.getElementById('colorVal').value = "#000";
     } else {
         let root = document.documentElement;
         root.style.setProperty('--color', back);
+        document.getElementById('colorVal').value = back;
     }
     if (them == null) {
         let root = document.documentElement;
         root.style.setProperty('--color1', '#03e9f4');
+        document.getElementById('colorVal1').value = "#03e9f4";
     } else {
         let root = document.documentElement;
         root.style.setProperty('--color1', them);
+        document.getElementById('colorVal').value = them;
     }
 };
 
