@@ -208,6 +208,7 @@ footer {
 }
 
 #close {
+    margin-top: 3%;
     width: 100%;
     outline: none;
     background: transparent;
