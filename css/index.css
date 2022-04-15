@@ -218,16 +218,16 @@ footer {
     height: auto;
     padding: 1% 2%;
     border-radius: 14px;
-    border: 2px solid var(--color1);
+    border: 2px solid var(--text);
     cursor: pointer;
     font-weight: 600;
     color: var(--color1);
     position: relative;
-    transition: all .5s linear;
+    transition: all .3s linear;
 }
 
 #runRgb:hover {
-    background: var(--color1);
+    background: var(--text);
 }
 
 #close {
@@ -237,17 +237,16 @@ footer {
     background: var(--color1);
     height: auto;
     padding: 1% 2%;
-    border-radius: 5px;
     border: 2px solid var(--color1);
     cursor: pointer;
     font-weight: 600;
-    color: var(--color1);
+    color: var(--text);
     position: relative;
-    transition: all .5s linear;
+    transition: all .3s linear;
 }
 
 #close:hover {
-    color: var(--text);
+    opacity: .9;
 }
 
 @media screen and (max-width: 768px) {
