@@ -9,6 +9,7 @@ document.getElementById('clearStorage').onclick = ()=>{
 /* name and color load from local storage */
 document.body.onload = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const nameValue = localStorage.getItem('name');
     let form;
     if(!nameValue){
@@ -26,6 +27,8 @@ document.body.onload = () => {
         document.getElementById('head').innerText = nameValue;
     }
 =======
+=======
+>>>>>>> origin/branch1
 
     const nameValue = localStorage.getItem('name');
     if(nameValue == null){
@@ -37,6 +40,9 @@ document.body.onload = () => {
       document.getElementById('head').innerText = form;
     }
 
+<<<<<<< HEAD
+>>>>>>> origin/branch1
+=======
 >>>>>>> origin/branch1
     let back = localStorage.getItem('color1');
     let them = localStorage.getItem('color2');
