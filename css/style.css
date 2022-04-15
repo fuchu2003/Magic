@@ -1,3 +1,7 @@
+/*
+*    DEVELOPER :-
+*    © SAYANDEEP KARAK    © sayandeep18.webdev@gmail.com    https://github.com/fuchu2003
+*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
@@ -8,6 +12,8 @@
 }
 
 :root {
+    --color: #03e9f4;
+    --color: #000;
     --text: #050801;
 }
 
@@ -22,6 +28,7 @@ header {
     height: 10vh;
     color: var(--color1);
     cursor: default;
+    text-transform: uppercase;
 }
 
 #main {
@@ -87,7 +94,7 @@ button {
     display: flex;
     justify-content: center;
     letter-spacing: 3px;
-    transition: .5s;
+    transition: all .5s linear;
     -webkit-box-reflect: below 2px linear-gradient(180deg, transparent, #0005);
 }
 
@@ -267,6 +274,8 @@ footer {
     transition: all .3s linear;
 }
 
+
+
 #close:hover {
     opacity: .9;
 }
@@ -279,19 +288,26 @@ footer {
     }
 
 }
+
+@media screen and (max-width: 566px) {
+  footer div>span {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 425px) {
     
     #main {
         height: 70vh;
     }
+
+    header h1 {
+      font-size: 26px;
+    }
     
     #color {
         border-radius: 0%;
         top: 60px;
-    }
-
-    footer {
-        font-size: 12px;
     }
 }
 @media screen and (max-width: 375px) {
@@ -302,6 +318,6 @@ footer {
     }
 
     footer {
-        font-size: 9px;
+        font-size: 12px;
     }
 }
