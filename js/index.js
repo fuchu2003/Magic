@@ -63,7 +63,7 @@ opt.oninput = () => {
         clearInterval(interval);
         val = optValue;
     }
-  autoColorChange('color',optValue);
+    autoColorChange('color',optValue);
 };
 
 
