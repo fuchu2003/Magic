@@ -37,7 +37,7 @@ header {
     position: fixed;
     top: 30px;
     left: 3%;
-    height: 28vh;
+    height: 34vh;
     width: auto;
     padding: 0% 1%;
     display: none;
@@ -62,7 +62,7 @@ table {
     }
 
     to {
-        height: 28vh;
+        height: 34vh;
         width: auto;
     }
 }
@@ -298,7 +298,7 @@ footer {
 
     #color {
         padding: 9%;
-        height: 28vh;
+        height: 34vh;
     }
 
     footer {
