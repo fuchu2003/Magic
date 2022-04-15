@@ -87,14 +87,17 @@ document.getElementById('close').onclick = () => {
 
 
 // click function for RGB theme
+let interval;
 document.getElementById('runRgb').onclick = () => {
     let note = 'রাতকানা লাল নীল সবুজ রঙের জন্য আপনি কি তৈরী ? \nবিঃদ্রঃ : রাতকানা লাল নীল সবুজ রঙ অন্ধকার পরিবেশে দেখতে পাবেন';
     let bgValue = localStorage.getItem('color1');
-    if (confirm(note) == true) {
-        if (bgValue == '#000000') {
+    if (confirm(note)) {    
+            let root = document.documentElement;
+            root.style.setProperty('--color', 'black');
+            clearInterval(interval);
             let a = 1, b = 1, c = 1;
             let R = 1, G = 1, B = 1;
-            setInterval(function changeColor() {
+            interval = setInterval(function changeColor() {
                 let root = document.documentElement;
                 root.style.setProperty('--color1', `rgb(${R}, ${G}, ${B})`);
                 if (R <= 0 || R >= 255) a = -a;
@@ -104,9 +107,10 @@ document.getElementById('runRgb').onclick = () => {
                 if (G >= 50) B += c;
                 R += a;
             }, 90);
-        } else {
-            alert('ভাত মুড়ি খেয়ে চেষ্টা করুন !!!!!!!!');
-        }
     }
-}
+    else {
+        alert('ভাত মুড়ি খেয়ে চেষ্টা করুন !!!!!!!!');
+    }
+};
+
 
