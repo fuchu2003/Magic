@@ -58,6 +58,7 @@ opt.oninput = () => {
     //current value of id(speed) element.
   const optValue = parseInt(document.getElementById('speed').value);
     //check backup value[val] & current value are equal or not.
+    //arnab kumar das
     if(val !== optValue){
         //clearInterval of interval object inside autoColorChange function
         clearInterval(interval);
