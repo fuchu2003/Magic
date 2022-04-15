@@ -33,7 +33,7 @@ header {
 }
 
 #color {
-    border: 3px solid var(--color1);
+
     position: fixed;
     top: 30px;
     left: 3%;
