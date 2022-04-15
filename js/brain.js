@@ -1,11 +1,11 @@
- /* color load from local storage */
+/* color load from local storage */
 
 document.body.onload = () => {
     let back = localStorage.getItem('color1');
     let them = localStorage.getItem('color2');
-  
+
     /* if value null return default value else set the actual value */
-  
+
     if (back == null) {
         let root = document.documentElement;
         root.style.setProperty('--color', '#000');
@@ -35,20 +35,20 @@ btn.addEventListener('click', () => {
 });
 
 /* auto color change */
-function autoColorChange(element,time){
-  let a = 1, b = 1, c = 1;
-  let R = 1, G = 1, B = 1;
+function autoColorChange(element, time) {
+    let a = 1, b = 1, c = 1;
+    let R = 1, G = 1, B = 1;
     //use var because clearInterval requried interval object name.
-  var interval = setInterval(function colorChange(){
-      document.getElementById(element).style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
-      if (R <= 0 || R >= 255) a = -a;
-      if (G <= 0 || G >= 255) b = -b;
-      if (B <= 0 || B >= 255) c = -c;
-      if (R >= 50) G += b;
-      if (G >= 50) B += c;
-      R += a;
-      console.log(time);
-  }, time);
+    interval = setInterval(function colorChange() {
+        document.getElementById(element).style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
+        if (R <= 0 || R >= 255) a = -a;
+        if (G <= 0 || G >= 255) b = -b;
+        if (B <= 0 || B >= 255) c = -c;
+        if (R >= 50) G += b;
+        if (G >= 50) B += c;
+        R += a;
+        console.log(time);
+    }, time);
 }
 
 let opt = document.getElementById('speed');
@@ -56,15 +56,15 @@ let opt = document.getElementById('speed');
 let val = parseInt(document.getElementById('speed').value);
 opt.oninput = () => {
     //current value of id(speed) element.
-  const optValue = parseInt(document.getElementById('speed').value);
+    const optValue = parseInt(document.getElementById('speed').value);
     //check backup value[val] & current value are equal or not.
     //arnab kumar das
-    if(val !== optValue){
+    if (val !== optValue) {
         //clearInterval of interval object inside autoColorChange function
         clearInterval(interval);
         val = optValue;
     }
-    autoColorChange('color',optValue);
+    autoColorChange('color', optValue);
 };
 
 

@@ -44,11 +44,15 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-animation-name: new;
+    animation-name: new;
     animation-duration: .8s;
     animation-iteration-count: 1;
     transition: all .8s linear;
+}
+
+table {
+    height: auto;
+    width: 100%;
 }
 
 @keyframes new {
