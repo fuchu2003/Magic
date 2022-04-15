@@ -1,6 +1,13 @@
+ /*
+*    DEVELOPERS :-
+*    © SAYANDEEP KARAK    © sayandeep18.webdev@gmail.com    https://github.com/fuchu2003
+*    © ARNAB KUMAR DAS    © electroarnab2001@gmail.com    https://github.com/akd2001
+*/
+
 /* Clear Local Storage */
+// alert("")
 document.getElementById('clearStorage').onclick = ()=>{
-    let cnf = confirm('are you sure ?');
+    let cnf = confirm('অতো কি আছে যে পরিষ্কার করছো ?');
     if (cnf) {
         localStorage.clear();
         location.reload();
@@ -8,42 +15,22 @@ document.getElementById('clearStorage').onclick = ()=>{
 };
 /* name and color load from local storage */
 document.body.onload = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const nameValue = localStorage.getItem('name');
     let form;
     if(!nameValue){
         //open input prompt until user inuput some text.
         while(1){
-            alert('Name must be required for see Magic');
+            alert('মহারাজ আপনার নামটা অবশ্যই দরকার');
             do{
-                form = prompt("Enter Your Name For See Magic.",'');
+                form = prompt("মহারাজ দয়া করে আপনার নামটা দিন",'');
             }while(form === '');
             if(form) break;
         }
         localStorage.setItem('name', form);
-        document.getElementById('head').innerText = form;
+        document.getElementById('head').innerText = `Welcome ${form}`;
     }else{
-        document.getElementById('head').innerText = nameValue;
+        document.getElementById('head').innerText = `Welcome ${nameValue}`;
     }
-=======
-=======
->>>>>>> origin/branch1
-
-    const nameValue = localStorage.getItem('name');
-    if(nameValue == null){
-        do{
-            const form = prompt("Enter Your Name For See Magic.",'');
-        }while(!form);
-        localStorage.setItem('name', form);
-    } else {
-      document.getElementById('head').innerText = form;
-    }
-
-<<<<<<< HEAD
->>>>>>> origin/branch1
-=======
->>>>>>> origin/branch1
     let back = localStorage.getItem('color1');
     let them = localStorage.getItem('color2');
     /* if value null return default value else set the actual value */
@@ -72,6 +59,7 @@ btn.addEventListener('click', () => {
     let colorDiv = document.getElementById('color');
     colorDiv.style.cssText = "display:flex;";
 });
+
 /* auto color change */
 function autoColorChange(element, time) {
     let a = 1, b = 1, c = 1;
@@ -131,7 +119,7 @@ document.getElementById('close').onclick = () => {
 
 // click function for RGB theme
 document.getElementById('runRgb').onclick = () => {
-    let note = 'Are sure for apply Rgb Theme ? \nNote : RGB theme can only apply in Black Background';
+    let note = 'রাতকানা লাল নীল সবুজ রঙের জন্য আপনি কি তৈরী ? \nবিঃদ্রঃ : রাতকানা লাল নীল সবুজ রঙ অন্ধকার পরিবেশে দেখতে পাবেন';
     let bgValue = localStorage.getItem('color1');
     if (confirm(note) == true) {
         if (bgValue == '#000000') {
@@ -146,9 +134,9 @@ document.getElementById('runRgb').onclick = () => {
                 if (R >= 50) G += b;
                 if (G >= 50) B += c;
                 R += a;
-            }, 80);
+            }, 90);
         } else {
-            alert('Try again ! must set up Dark background !!!!');
+            alert('ভাত মুড়ি খেয়ে চেষ্টা করুন !!!!!!!!');
         }
     }
 }
