@@ -91,14 +91,9 @@ let interval;
 document.getElementById('runRgb').onclick = () => {
     let note = 'রাতকানা লাল নীল সবুজ রঙের জন্য আপনি কি তৈরী ? \nবিঃদ্রঃ : রাতকানা লাল নীল সবুজ রঙ অন্ধকার পরিবেশে দেখতে পাবেন';
     let bgValue = localStorage.getItem('color1');
-<<<<<<< HEAD
     if (confirm(note)) {    
             let root = document.documentElement;
             root.style.setProperty('--color', 'black');
-=======
-    if (confirm(note)) {
-        if (bgValue == '#000000') {
->>>>>>> origin/branch1
             clearInterval(interval);
             let a = 1, b = 1, c = 1;
             let R = 1, G = 1, B = 1;
