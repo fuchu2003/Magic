@@ -1,6 +1,17 @@
 /* color load from local storage */
 
 document.body.onload = () => {
+
+    const nameValue = localStorage.getItem('name');
+    if(nameValue == null){
+        do{
+            const form = prompt("Enter Your Name For See Magic.",'');
+        }while(!form);
+        localStorage.setItem('name', form);
+    } else {
+      document.getElementById('head').innerText = form;
+    }
+
     let back = localStorage.getItem('color1');
     let them = localStorage.getItem('color2');
 
