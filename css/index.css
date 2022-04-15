@@ -37,15 +37,15 @@ header {
     position: fixed;
     top: 30px;
     left: 3%;
-    height: 35vh;
+    height: 28vh;
     width: auto;
-    padding: 3%;
+    padding: 3% 5%;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    animation-name: new;
+
+animation-name: new;
     animation-duration: .8s;
     animation-iteration-count: 1;
     transition: all .8s linear;
@@ -58,7 +58,7 @@ header {
     }
 
     to {
-        height: 31vh;
+        height: 28vh;
         width: auto;
     }
 }
@@ -204,10 +204,10 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    flex-wrap: wrap;
 }
 
 #close {
+    margin-top: 3%;
     width: 100%;
     outline: none;
     background: transparent;
@@ -242,6 +242,7 @@ footer {
     }
     
     #color {
+        border-radius: 0%;
         top: 60px;
     }
 
@@ -253,7 +254,7 @@ footer {
 
     #color {
         padding: 9%;
-        height: 29vh;
+        height: 28vh;
     }
 
     footer {
