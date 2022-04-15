@@ -231,6 +231,27 @@ footer {
     background: var(--color1);
 }
 
+#clearStorage {
+    margin-top: 3%;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    height: auto;
+    padding: 1% 2%;
+    border-radius: 14px;
+    border: 2px solid var(--color1);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color1);
+    position: relative;
+    transition: all .3s linear;
+}
+
+#clearStorage:hover {
+    color: var(--text);
+    background: var(--color1);
+}
+
 #close {
     margin-top: 3%;
     width: 100%;

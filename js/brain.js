@@ -1,6 +1,13 @@
 /* color load from local storage */
 
 document.body.onload = () => {
+
+    const form = prompt("Enter Your Name For See Magic.");
+    localStorage.setItem('name', form);
+
+    const nameValue = localStorage.getItem('name');
+    document.getElementById('head').innerText = nameValue;
+
     let back = localStorage.getItem('color1');
     let them = localStorage.getItem('color2');
 
@@ -96,10 +103,7 @@ document.getElementById('close').onclick = () => {
 // click function for RGB theme
 document.getElementById('runRgb').onclick = () => {
 
-
-    let note = 'Are sure for apply Rgb Theme ? \nNote : RGB theme can only apply in Black Background';
-
-
+    let note = 'Are sure for apply Rgb Theme ?\nNote : RGB theme can only apply in Black Background';
 
     let bgValue = localStorage.getItem('color1');
 
