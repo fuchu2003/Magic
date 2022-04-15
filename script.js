@@ -8,6 +8,7 @@ document.getElementById('clearStorage').onclick = ()=>{
 };
 /* name and color load from local storage */
 document.body.onload = () => {
+<<<<<<< HEAD
     const nameValue = localStorage.getItem('name');
     let form;
     if(!nameValue){
@@ -24,6 +25,19 @@ document.body.onload = () => {
     }else{
         document.getElementById('head').innerText = nameValue;
     }
+=======
+
+    const nameValue = localStorage.getItem('name');
+    if(nameValue == null){
+        do{
+            const form = prompt("Enter Your Name For See Magic.",'');
+        }while(!form);
+        localStorage.setItem('name', form);
+    } else {
+      document.getElementById('head').innerText = form;
+    }
+
+>>>>>>> origin/branch1
     let back = localStorage.getItem('color1');
     let them = localStorage.getItem('color2');
     /* if value null return default value else set the actual value */
