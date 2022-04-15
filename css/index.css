@@ -218,16 +218,17 @@ footer {
     height: auto;
     padding: 1% 2%;
     border-radius: 14px;
-    border: 2px solid var(--text);
+    border: 2px solid var(--color1);
     cursor: pointer;
     font-weight: 600;
-    color: var(--text);
+    color: var(--color1);
     position: relative;
     transition: all .3s linear;
 }
 
 #runRgb:hover {
-    background: var(--text);
+    color: var(--text);
+    background: var(--color1);
 }
 
 #close {
