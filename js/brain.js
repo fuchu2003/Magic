@@ -87,8 +87,14 @@ document.getElementById('colorVal1').oninput = () => {
     root.style.setProperty('--color1', theme);
 };
 
-/* close button */
+//  close button 
 document.getElementById('close').onclick = () => {
     document.getElementById('color').style.display = "none";
 };
+
+
+// click function for RGB theme
+document.getElementById('runRgb').onclick = ()=>{
+    
+}
 

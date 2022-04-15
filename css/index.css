@@ -221,7 +221,7 @@ footer {
     border: 2px solid var(--text);
     cursor: pointer;
     font-weight: 600;
-    color: var(--color1);
+    color: var(--text);
     position: relative;
     transition: all .3s linear;
 }
