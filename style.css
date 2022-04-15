@@ -8,6 +8,7 @@
 }
 
 :root {
+    --color1: #000;
     --text: #050801;
 }
 
@@ -37,7 +38,7 @@ header {
     position: fixed;
     top: 30px;
     left: 3%;
-    height: 28vh;
+    height: 34vh;
     width: auto;
     padding: 0% 1%;
     display: none;
@@ -62,7 +63,7 @@ table {
     }
 
     to {
-        height: 28vh;
+        height: 34vh;
         width: auto;
     }
 }
@@ -231,6 +232,27 @@ footer {
     background: var(--color1);
 }
 
+#clearStorage {
+    margin-top: 3%;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    height: auto;
+    padding: 1% 2%;
+    border-radius: 14px;
+    border: 2px solid var(--color1);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color1);
+    position: relative;
+    transition: all .3s linear;
+}
+
+#clearStorage:hover {
+    color: var(--text);
+    background: var(--color1);
+}
+
 #close {
     margin-top: 3%;
     width: 100%;
@@ -277,7 +299,7 @@ footer {
 
     #color {
         padding: 9%;
-        height: 28vh;
+        height: 34vh;
     }
 
     footer {
