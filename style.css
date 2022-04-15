@@ -23,6 +23,7 @@ header {
     height: 10vh;
     color: var(--color1);
     cursor: default;
+    text-transform: uppercase;
 }
 
 #main {
@@ -266,6 +267,10 @@ footer {
     color: var(--text);
     position: relative;
     transition: all .3s linear;
+}
+
+#sayan {
+  border-right: 1px solid var(--color1);
 }
 
 #close:hover {
