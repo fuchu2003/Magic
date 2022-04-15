@@ -94,7 +94,21 @@ document.getElementById('close').onclick = () => {
 
 
 // click function for RGB theme
-document.getElementById('runRgb').onclick = ()=>{
+document.getElementById('runRgb').onclick = () => {
     
+    let a = 1, b = 1, c = 1;
+    let R = 1, G = 1, B = 1;
+    setInterval(function changeColor() {
+
+        let root = document.documentElement;
+        root.style.setProperty('--color1',`rgb(${R}, ${G}, ${B})`);
+        if (R <= 0 || R >= 255) a = -a;
+        if (G <= 0 || G >= 255) b = -b;
+        if (B <= 0 || B >= 255) c = -c;
+        if (R >= 50) G += b;
+        if (G >= 50) B += c;
+        R += a;
+    }, 80);
+
 }
 
