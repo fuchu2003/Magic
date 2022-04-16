@@ -87,6 +87,7 @@ button {
     overflow: hidden;
     text-transform: uppercase;
     font-weight: bold;
+    outline: none;
     width: auto;
     color: var(--color1);
     display: flex;
