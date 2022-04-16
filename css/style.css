@@ -306,43 +306,47 @@ footer {
 
     #color {
         top: 60px;
-        padding: 5%;
     }
 
 }
 
 @media screen and (max-width: 566px) {
-  footer div>span {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 425px) {
-    
-    #main {
-        height: 70vh;
+    footer div>span {
+        display: none;
     }
 
-    header h1 {
-      font-size: 26px;
-    }
-    
-    #color {
-        border-radius: 0%;
-        top: 60px;
-    }
-}
-@media screen and (max-width: 375px) {
-
-    #color {
-        padding: 0%;
+    #colors {
         width: 44%;
-        height: 28vh;
     }
 
     .colors {
         width: 10vw;
     }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    #main {
+        height: 70vh;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    #color {
+        border-radius: 0%;
+        top: 60px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    #color {
+        height: 28vh;
+    }
+
 
     footer {
         font-size: 12px;
