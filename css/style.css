@@ -207,8 +207,9 @@ button span:nth-child(4) {
     background-color: transparent;
     -webkit-appearance: none;
     -moz-appearence: none;
-    border: none;
+    border: 1px solid var(--color1);
     cursor: pointer;
+    border-radius: 50%;
     appearance: none;
     height: 8vh;
 }
