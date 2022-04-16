@@ -105,7 +105,7 @@ document.getElementById("runRgb").onclick = () => {
                 interval = setInterval(function changeColor() {
                     let root = document.documentElement;
                     root.style.setProperty('--color1', `rgb(${R}, ${G}, ${B})`);
-                    document.getElementById('colorVal1').value = `rgb(${R}, ${G}, ${B})`;
+                    // document.getElementById('colorVal1').value = `rgb(${R}, ${G}, ${B})`;
                     if (R <= 0 || R >= 255) a = -a;
                     if (G <= 0 || G >= 255) b = -b;
                     if (B <= 0 || B >= 255) c = -c;
