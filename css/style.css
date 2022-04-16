@@ -335,8 +335,13 @@ footer {
 @media screen and (max-width: 375px) {
 
     #color {
-        padding: 9%;
+        padding: 0%;
+        width: 44%;
         height: 28vh;
+    }
+
+    .colors {
+        width: 10vw;
     }
 
     footer {
