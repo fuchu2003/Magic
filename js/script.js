@@ -13,7 +13,6 @@ document.getElementById('clearStorage').onclick = ()=>{
         location.reload();
     }    
 };
-
 /* name and color load from local storage */
 document.body.onload = () => {
     const nameValue = localStorage.getItem('name');
@@ -32,27 +31,25 @@ document.body.onload = () => {
     }else{
         document.getElementById('head').innerText = `Welcome ${nameValue}`;
     }
-
-    let back = localStorage.getItem('bgColor');
-    let them = localStorage.getItem('themeColor');
-
+    let back = localStorage.getItem('color1');
+    let them = localStorage.getItem('color2');
     /* if value null return default value else set the actual value */
     if (back == null) {
         let root = document.documentElement;
-        root.style.setProperty('--bg', '#000');
+        root.style.setProperty('--color', '#000');
         document.getElementById('colorVal').value = "#000";
     } else {
         let root = document.documentElement;
-        root.style.setProperty('--bg', back);
+        root.style.setProperty('--color', back);
         document.getElementById('colorVal').value = back;
     }
     if (them == null) {
         let root = document.documentElement;
-        root.style.setProperty('--theme', '#03e9f4');
+        root.style.setProperty('--color1', '#03e9f4');
         document.getElementById('colorVal1').value = "#03e9f4";
     } else {
         let root = document.documentElement;
-        root.style.setProperty('--theme', them);
+        root.style.setProperty('--color1', them);
         document.getElementById('colorVal').value = them;
     }
 };
@@ -68,7 +65,7 @@ btn.addEventListener('click', () => {
 /* background color change and set up to localStorage */
 document.getElementById('colorVal').oninput = () => {
     let bg = document.getElementById('colorVal').value;
-    localStorage.setItem('bgColor', bg);
+    localStorage.setItem('color1', bg);
     let root = document.documentElement;
     root.style.setProperty('--color', bg);
 };
@@ -77,7 +74,7 @@ document.getElementById('colorVal').oninput = () => {
 /*  color change and set up to localStorage */
 document.getElementById('colorVal1').oninput = () => {
     let theme = document.getElementById('colorVal1').value;
-    localStorage.setItem('themeColor', theme);
+    localStorage.setItem('color2', theme);
     let root = document.documentElement;
     root.style.setProperty('--color1', theme);
 };
@@ -93,16 +90,16 @@ document.getElementById('close').onclick = () => {
 let interval;
 document.getElementById('runRgb').onclick = () => {
     let note = 'রাতকানা লাল নীল সবুজ রঙের জন্য আপনি কি তৈরী ? \nবিঃদ্রঃ : রাতকানা লাল নীল সবুজ রঙ অন্ধকার পরিবেশে দেখতে পাবেন';
-    let bgValue = localStorage.getItem('bgColor');
+    let bgValue = localStorage.getItem('color1');
     if (confirm(note)) {    
             let root = document.documentElement;
-            root.style.setProperty('--bg', 'black');
+            root.style.setProperty('--color', 'black');
             clearInterval(interval);
             let a = 1, b = 1, c = 1;
             let R = 1, G = 1, B = 1;
             interval = setInterval(function changeColor() {
                 let root = document.documentElement;
-                root.style.setProperty('--theme', `rgb(${R}, ${G}, ${B})`);
+                root.style.setProperty('--color1', `rgb(${R}, ${G}, ${B})`);
                 if (R <= 0 || R >= 255) a = -a;
                 if (G <= 0 || G >= 255) b = -b;
                 if (B <= 0 || B >= 255) c = -c;
