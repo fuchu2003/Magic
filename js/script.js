@@ -85,71 +85,47 @@ document.getElementById('close').onclick = () => {
     document.getElementById('color').style.display = "none";
 };
 
-/*
-let g = 0;
-        let h = parseInt(localStorage.getItem('value'));
-        if (typeof (g) == typeof (h)) {
-            function cal() {
-                h++;
-                console.log(parseInt(h));
-                localStorage.setItem('value', h);
-            }
-            // document.getElementById('input').value = "reg";
-        }
-*/
-
-/*
-    //Click counter for ID('count') button.
-let clickCount = 1;
-if (localStorage.getItem('clickCount')) { //check clickCount is avaliable or not.
-    clickCount = parseInt(localStorage.getItem('clickCount')); //convert localStorage clickCount[Str] to Int.
-}
-*/
-
-
-
-
 
 //click function for RGB theme
 let interval;
-let R = 1, G = 1, B = 1;
 let a = 1, b = 1, c = 1;
+let R = 1, G = 1, B = 1;
+let countValue = parseInt((localStorage.getItem('value')) ? localStorage.getItem('value') : 0);
+
 document.getElementById("runRgb").onclick = () => {
-    let countValue = parseInt((localStorage.getItem('value')) ? localStorage.getItem('value'):0);
-    
     if (typeof (1) == typeof (countValue)) {
             localStorage.setItem('value', countValue);
             if (countValue % 2 == 0) {
-                document.getElementById('runRgb').value = 'Stop RGB';
+                document.getElementById('runRgb').value = 'Stop Aniamtion';
                 let note = 'রাতকানা লাল নীল সবুজ রঙের জন্য আপনি কি তৈরী ? \nবিঃদ্রঃ : রাতকানা লাল নীল সবুজ রঙ অন্ধকার পরিবেশে দেখতে পাবেন';
-                let bgValue = localStorage.getItem('color1');
                 if (confirm(note)) {
                     let root = document.documentElement;
                     root.style.setProperty('--color', 'black');
                     clearInterval(interval);
-                    interval = setInterval(function changeColor() {
-                        let root = document.documentElement;
-                        root.style.setProperty('--color1', `rgb(${R}, ${G}, ${B})`);
-                        if (R <= 0 || R >= 255) a = -a;
-                        if (G <= 0 || G >= 255) b = -b;
-                        if (B <= 0 || B >= 255) c = -c;
-                        if (R >= 50) G += b;
-                        if (G >= 50) B += c;
-                        R += a;
-                    }, 90);
+        			      interval = setInterval(function changeColor() {
+            				let root = document.documentElement;
+                		root.style.setProperty('--color1', `rgb(${R}, ${G}, ${B})`);
+										document.getElementById('colorVal1').value = `rgb(${R}, ${G}, ${B})`;
+            				if (R <= 0 || R >= 255) a = -a;
+            				if (G <= 0 || G >= 255) b = -b;
+            				if (B <= 0 || B >= 255) c = -c;
+            				if (R >= 50) G += b;
+            				if (G >= 50) B += c;
+            				R += a;
+        				}, 90);
                 }
                 else {
                     alert('ভাত মুড়ি খেয়ে চেষ্টা করুন !!!!!!!!');
                 }
             } else {
-                //lets do the stop
+                // lets do the stop
                 let root = document.documentElement;
                 let theme = getComputedStyle(root).getPropertyValue('--color1');;
                 localStorage.setItem('color2', theme);
                 
                 root.style.setProperty('--color1', theme);
               
-                document.getElementById('runRgb').value = 'Start RGB';
+                document.getElementById('runRgb').value = 'Start Aniamtion';
                 clearInterval(interval);
             }
             countValue++;
