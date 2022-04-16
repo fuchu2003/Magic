@@ -45,7 +45,7 @@ header {
     top: 30px;
     left: 3%;
     height: 34vh;
-    width: 44%;
+    width: 15%;
     padding: 0% 1%;
     display: none;
     flex-direction: column;
@@ -314,7 +314,7 @@ footer {
         display: none;
     }
 
-    #colors {
+    #color {
         width: 44%;
     }
 
