@@ -304,7 +304,13 @@ footer {
 @media screen and (max-width: 768px) {
 
     #color {
+        padding: 0%;
+        width: 25%;
         top: 60px;
+    }
+
+    .colors {
+        width: 4vw;
     }
 
 }
@@ -315,11 +321,11 @@ footer {
     }
 
     #color {
-        width: 44%;
+        width: 34%;
     }
 
     .colors {
-        width: 8vw;
+        width: 6vw;
     }
 
 }
@@ -330,24 +336,47 @@ footer {
         height: 70vh;
     }
 
+    .colors {
+        width: 5vw;
+    }
+
     header h1 {
-        font-size: 26px;
+        font-size: 1.6rem;
     }
 
     #color {
         border-radius: 0%;
-        top: 60px;
+        top: 34px;
     }
 }
 
 @media screen and (max-width: 375px) {
 
     #color {
+        left: 31%;
+        top: 49px;
         height: 28vh;
     }
 
+    .colors {
+        width: 7vw;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
 
     footer {
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .colors {
+        height: 4vh;
+    }
+
+    #color {
+        left: 31%;
     }
 }
