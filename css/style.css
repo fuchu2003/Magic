@@ -65,12 +65,10 @@ table {
 @keyframes new {
     from {
         height: 15vh;
-        width: auto;
     }
 
     to {
         height: 34vh;
-        width: auto;
     }
 }
 
