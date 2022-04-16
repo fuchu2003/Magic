@@ -14,17 +14,17 @@ document.getElementById('clearStorage').onclick = () => {
 };
 /* name and color load from local storage */
 document.body.onload = () => {
-    
+
     const nameValue = localStorage.getItem('name');
     let form;
     if (!nameValue) {
         //open input prompt until user inuput some text.
-        while(1){
+        while (1) {
             alert('মহারাজ আপনার নামটা অবশ্যই দরকার');
-            do{
-                form = prompt("মহারাজ দয়া করে আপনার নামটা দিন",'');
-            }while(form === '');
-            if(form) break;
+            do {
+                form = prompt("মহারাজ দয়া করে আপনার নামটা দিন", '');
+            } while (form === '');
+            if (form) break;
         }
         localStorage.setItem('name', form);
         document.getElementById('head').innerText = `Welcome ${form}`;
@@ -94,40 +94,40 @@ let countValue = parseInt((localStorage.getItem('value')) ? localStorage.getItem
 
 document.getElementById("runRgb").onclick = () => {
     if (typeof (1) == typeof (countValue)) {
-            localStorage.setItem('value', countValue);
-            if (countValue % 2 == 0) {
-                document.getElementById('runRgb').value = 'Stop Aniamtion';
-                let note = 'রাতকানা লাল নীল সবুজ রঙের জন্য আপনি কি তৈরী ? \nবিঃদ্রঃ : রাতকানা লাল নীল সবুজ রঙ অন্ধকার পরিবেশে দেখতে পাবেন';
-                if (confirm(note)) {
-                    let root = document.documentElement;
-                    root.style.setProperty('--color', 'black');
-                    clearInterval(interval);
-        			      interval = setInterval(function changeColor() {
-            				let root = document.documentElement;
-                		root.style.setProperty('--color1', `rgb(${R}, ${G}, ${B})`);
-										document.getElementById('colorVal1').value = `rgb(${R}, ${G}, ${B})`;
-            				if (R <= 0 || R >= 255) a = -a;
-            				if (G <= 0 || G >= 255) b = -b;
-            				if (B <= 0 || B >= 255) c = -c;
-            				if (R >= 50) G += b;
-            				if (G >= 50) B += c;
-            				R += a;
-        				}, 90);
-                }
-                else {
-                    alert('ভাত মুড়ি খেয়ে চেষ্টা করুন !!!!!!!!');
-                }
-            } else {
-                // lets do the stop
+        localStorage.setItem('value', countValue);
+        if (countValue % 2 == 0) {
+            document.getElementById('runRgb').value = 'Stop Aniamtion';
+            let note = 'রাতকানা লাল নীল সবুজ রঙের জন্য আপনি কি তৈরী ? \nবিঃদ্রঃ : রাতকানা লাল নীল সবুজ রঙ অন্ধকার পরিবেশে দেখতে পাবেন';
+            if (confirm(note)) {
                 let root = document.documentElement;
-                let theme = getComputedStyle(root).getPropertyValue('--color1');;
-                localStorage.setItem('color2', theme);
-                
-                root.style.setProperty('--color1', theme);
-              
-                document.getElementById('runRgb').value = 'Start Aniamtion';
+                root.style.setProperty('--color', 'black');
                 clearInterval(interval);
+                interval = setInterval(function changeColor() {
+                    let root = document.documentElement;
+                    root.style.setProperty('--color1', `rgb(${R}, ${G}, ${B})`);
+                    document.getElementById('colorVal1').value = `rgb(${R}, ${G}, ${B})`;
+                    if (R <= 0 || R >= 255) a = -a;
+                    if (G <= 0 || G >= 255) b = -b;
+                    if (B <= 0 || B >= 255) c = -c;
+                    if (R >= 50) G += b;
+                    if (G >= 50) B += c;
+                    R += a;
+                }, 90);
             }
-            countValue++;
-    }  
+            else {
+                alert('ভাত মুড়ি খেয়ে চেষ্টা করুন !!!!!!!!');
+            }
+        } else {
+            // lets do the stop
+            let root = document.documentElement;
+            let theme = getComputedStyle(root).getPropertyValue('--color1');;
+            localStorage.setItem('color2', theme);
+
+            root.style.setProperty('--color1', theme);
+
+            document.getElementById('runRgb').value = 'Start Aniamtion';
+            clearInterval(interval);
+        }
+        countValue++;
+    }
 };
