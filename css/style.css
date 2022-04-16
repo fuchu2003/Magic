@@ -326,6 +326,7 @@ footer {
 
     .colors {
         width: 6vw;
+         height: 5vh;
     }
 
 }
@@ -338,7 +339,7 @@ footer {
 
     .colors {
         width: 5vw;
-        height: 5vh;
+       
     }
 
     header h1 {
