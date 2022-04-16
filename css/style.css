@@ -203,7 +203,7 @@ button span:nth-child(4) {
     }
 }
 
-#colors {
+.colors {
     background-color: transparent;
     -webkit-appearance: none;
     -moz-appearence: none;
@@ -213,12 +213,12 @@ button span:nth-child(4) {
     height: 8vh;
 }
 
-#colors::-webkit-color-swatch {
+.colors::-webkit-color-swatch {
     border-radius: 50%;
     border: none;
 }
 
-#colors::-moz-color-swatch {
+.colors::-moz-color-swatch {
     border-radius: 50%;
     border: none;
 }
