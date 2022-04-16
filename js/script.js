@@ -114,9 +114,7 @@ if (localStorage.getItem('clickCount')) { //check clickCount is avaliable or not
 let interval;
 let R = 1, G = 1, B = 1;
 let a = 1, b = 1, c = 1;
-let startButton = document.getElementById("runRgb");
-
-startButton.onclick = () => {
+document.getElementById("runRgb").onclick = () => {
     let countValue = parseInt((localStorage.getItem('value')) ? localStorage.getItem('value'):0);
     
     if (typeof (1) == typeof (countValue)) {
