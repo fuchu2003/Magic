@@ -13,6 +13,7 @@ document.getElementById('clearStorage').onclick = ()=>{
         location.reload();
     }    
 };
+
 /* name and color load from local storage */
 document.body.onload = () => {
     const nameValue = localStorage.getItem('name');
@@ -87,8 +88,11 @@ document.getElementById('close').onclick = () => {
 
 
 // click function for RGB theme
+
+
 let interval;
 document.getElementById('runRgb').onclick = () => {
+    // let i = parseInt(localStorage.getItem('val'));
     let note = 'রাতকানা লাল নীল সবুজ রঙের জন্য আপনি কি তৈরী ? \nবিঃদ্রঃ : রাতকানা লাল নীল সবুজ রঙ অন্ধকার পরিবেশে দেখতে পাবেন';
     let bgValue = localStorage.getItem('color1');
     if (confirm(note)) {    

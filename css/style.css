@@ -45,7 +45,7 @@ header {
     top: 30px;
     left: 3%;
     height: 34vh;
-    width: auto;
+    width: 15%;
     padding: 0% 1%;
     display: none;
     flex-direction: column;
@@ -211,7 +211,8 @@ button span:nth-child(4) {
     cursor: pointer;
     border-radius: 50%;
     appearance: none;
-    height: 8vh;
+    height: 6vh;
+    width: 3vw;
 }
 
 .colors::-webkit-color-swatch {
