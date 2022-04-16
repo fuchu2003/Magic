@@ -203,6 +203,26 @@ button span:nth-child(4) {
     }
 }
 
+#colors {
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearence: none;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    height: 8vh;
+}
+
+#colors::-webkit-color-swatch {
+    border-radius: 50%;
+    border: none;
+}
+
+#colors::-moz-color-swatch {
+    border-radius: 50%;
+    border: none;
+}
+
 footer audio {
     display: none;
 }
