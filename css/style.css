@@ -208,7 +208,7 @@ button span:nth-child(4) {
     -moz-appearence: none;
     border: 1px solid var(--color1);
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 15%;
     appearance: none;
     height: 6vh;
     width: 3vw;
@@ -301,6 +301,14 @@ footer {
     opacity: .9;
 }
 
+@media screen and (max-width: 1024px) {
+    
+    #color {
+        width: 18%;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
 
     #color {
@@ -315,7 +323,7 @@ footer {
 
 }
 
-@media screen and (max-width: 566px) {
+@media screen and (max-width: 620) {
     footer div>span {
         display: none;
     }
