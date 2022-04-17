@@ -50,7 +50,7 @@ document.body.onload = () => {
     } else {
         let root = document.documentElement;
         root.style.setProperty('--color1', them);
-        document.getElementById('colorVal').value = them;
+        document.getElementById('colorVal1').value = them;
     }
 };
 /* open popup box8 */
