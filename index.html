@@ -1,3 +1,8 @@
+<!--
+*    DEVELOPER :-
+*    © SAYANDEEP KARAK    © sayandeep18.webdev@gmail.com    https://github.com/fuchu2003
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,17 +10,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Body Color</title>
+    <title>Animated Background</title>
 
     <link rel="shortcut icon" href="img/download-removebg-preview.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/index.css">
-
+    <link rel="stylesheet" href="css/style.css" >
+  
 </head>
 
 <body>
     <header>
-        <h1>Namaste</h1>
+        <h1 id="head"></h1>
     </header>
     <section id="main">
         <div id="color">
@@ -36,9 +41,9 @@
                         <input type="color" class="colors" id="colorVal1">
                     </td>
                 </tr>
-              <tr>
+<!--               <tr>
                     <td>
-                        <label for="colorVal">Choose Speed</label>
+                        <label for="speed">Choose Speed</label>
                     </td>
                     <td>
                         <select  id="speed">
@@ -48,6 +53,16 @@
                             <option value="1500">1.5S</option>
                             <option value="2000">2S</option>
                         </select>
+                    </td>
+                </tr> -->
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Start Animation" id="runRgb">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Clear All Data" id="clearStorage">
                     </td>
                 </tr>
                 <tr>
@@ -73,23 +88,28 @@
         <div>
             &copy; Sayandeep Karak
             <br>
+          <span>
             &copy; sayandeep18.webdev@gmail.com
+          </span>
         </div>
         <div>
             &copy; Arnab kumar das
             <br>
+            <span>
             &copy; electroarnab2001@gmail.com
+            </span>
         </div>
 
-       <audio src="/music/Dua Lipa - Levitating Featuring DaBaby (Official Music Video).mp3" autoplay loop>
-        </audio>
+<!--         <audio src="/music/Dua Lipa - Levitating Featuring DaBaby (Official Music Video).mp3" autoplay loop> -->
+    <!-- </audio> -->
 
     </footer>
     
 
 
-    <script src="js/index.js"></script>
+    
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>
