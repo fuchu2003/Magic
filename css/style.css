@@ -334,7 +334,7 @@ footer {
 
     .colors {
         width: 6vw;
-         height: 5vh;
+         height: 6vh;
     }
 
 }
@@ -375,7 +375,7 @@ footer {
 
     .colors {
         width: 7vw;
-        height: 4vh;
+        height: 5vh;
     }
 
     header h1 {
@@ -389,6 +389,9 @@ footer {
 
 @media screen and (max-width: 320px) {
     
+    .colors {
+        width: 9vw;
+    }
 
     #color {
         left: 27%;
