@@ -73,8 +73,15 @@ document.getElementById('close').onclick = () => {
 };
 //click function for RGB theme
 let interval;
+let R,G,B;
+if(localStorage.getItem('R') && localStorage.getItem('G') && localStorage.getItem('B')){
+    R = localStorage.getItem('R');
+    G = localStorage.getItem('G');
+    B = localStorage.getItem('B');
+}else{
+    R = 1, G = 1, B = 1;
+}
 let a = 1, b = 1, c = 1;
-let R = 1, G = 1, B = 1;
 let countValue = parseInt((localStorage.getItem('value')) ? localStorage.getItem('value') : 0); //Click counter
 document.getElementById("runRgb").onclick = () => {
         localStorage.setItem('value', countValue);
@@ -86,6 +93,10 @@ document.getElementById("runRgb").onclick = () => {
                 clearInterval(interval);
                 interval = setInterval(()=>{
                     document.documentElement.style.setProperty('--color1', `rgb(${R}, ${G}, ${B})`);
+										localStorage.setItem('R', R);
+										localStorage.setItem('G', G);
+										localStorage.setItem('B', B);
+                  
                     if (R <= 0 || R >= 255) a = -a;
                     if (G <= 0 || G >= 255) b = -b;
                     if (B <= 0 || B >= 255) c = -c;
