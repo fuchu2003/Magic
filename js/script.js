@@ -108,3 +108,6 @@ document.getElementById("runRgb").onclick = () => {
         }
         countValue++;
 };
+
+
+// just add a new line
