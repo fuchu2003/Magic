@@ -373,6 +373,16 @@ footer {
         height: 28vh;
     }
 
+    @keyframes new {
+        from {
+            height: 15vh;
+        }
+    
+        to {
+            height: 28vh;
+        }
+    }
+
     .colors {
         width: 7vw;
         height: 5vh;
