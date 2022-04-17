@@ -323,7 +323,7 @@ footer {
 
 }
 
-@media screen and (max-width: 620) {
+@media screen and (max-width: 620px) {
     footer div>span {
         display: none;
     }
