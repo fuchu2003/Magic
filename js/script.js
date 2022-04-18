@@ -115,6 +115,7 @@ document.getElementById("runRgb").onclick = () => {
                 }, 90);
             }
             else {
+                document.getElementById('runRgb').value = 'Start Aniamtion';
                 alert('ভাত মুড়ি খেয়ে চেষ্টা করুন !!!!!!!!');
             }
         } else {
