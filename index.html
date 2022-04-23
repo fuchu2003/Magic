@@ -100,11 +100,16 @@
             </span>
         </div>
 
-        <!-- <audio src="music/background_music.mp3" autoplay loop></audio> -->
-        <iframe src="audio/background_music.mp3" type="audio/mp3" allow='autoplay' style="display:none" loop></iframe>
+        <audio src="audio/background_music.mp3" type="audio/mp3" id="audioElement" autoplay loop></audio>
+        <iframe src="https://cross-origin.com/myvideo.html" allow="autoplay">
 
+            <!-- <iframe src="audio/background_music.mp3" type="audio/mp3" allow='autoplay' style="display:none" -->
+            <!-- id="audioElement" loop></iframe> -->
     </footer>
-    <script src="js/script.js"></script>
+    <script>
+        document.getElementById("audioElement").play(); 
+    </script>
+    <!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>
